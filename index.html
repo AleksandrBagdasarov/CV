@@ -5,10 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bahdasarov Oleksandr | Backend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <style>
         /* Utility Classes */
+        body {
+            font-family: "Mulish", serif;
+        }
         .w-full {
-            width: 100%;
+            /* width: 100%; */
         }
 
         .min-h-screen {
@@ -84,12 +92,24 @@
             font-size: 1.875rem;
         }
 
+        .text-xl {
+            font-size: 1.25rem;
+        }
+
         .text-lg {
             font-size: 1.125rem;
         }
 
         .text-sm {
             font-size: 0.875rem;
+        }
+
+        .text-gray-1000 {
+            color: #111827;
+        }
+
+        .text-gray-900 {
+            color: #1F2937;
         }
 
         .text-gray-800 {
@@ -139,309 +159,434 @@
         .gap-6 {
             gap: 1.5rem;
         }
-
-        /* Grid Layout */
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            grid-auto-rows: auto;
-        }
-        .footer {
-            background-color: #f3f4f6;
-            /* padding: 1rem 0; */
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-            .footer-container {
-            max-width: 80rem;
-            margin: 0 auto;
-        }
-
-        .contact-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .flex-row {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+        }
+        .flex-column {
+            display: flex;
+            flex-direction: row;
+        }
+        .content-center {
+            justify-content: center;
+        }
+        .content-space-btw {
+            justify-content: space-between;
+        }
+
+        .social-btn-container {
+            display: flex;
             gap: 0.5rem;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #E5E7EB;
+            padding-bottom: 1rem;
         }
-
-        .contact-list li a {
-        color: #374151;
-        text-decoration: none;
-        font-size: 1rem;
+        .social-btn {
+            background-color: #F9FAFB;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            color: #4B5563;
+            text-decoration: none;
         }
-
-        .contact-list li a:hover {
-        text-decoration: underline;
-        }
-
-        @media (min-width: 768px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (min-width: 1280px) {
-            .grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
+        .social-btn:hover {
+            background-color: #E5E7EB;
         }
 
         /* Icon Sizing */
-        .w-5 {
-            width: 20px;
+        .w-1 {
+            width: 1rem;
         }
 
-        .h-5 {
-            height: 20px;
+        .h-1 {
+            height: 1rem;
+        }
+        .work-exp-card {
+            background-color: #FFFFFF;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .exp-tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .tech-badge {
+            background-color: #F9FAFB;
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            margin: 0.2rem 0;
+            color: #4B5563;
+        }
+        .status-tag-purple {
+            background-color: #F5F3FF;
+            color: #7C3AED;
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+        }
+        .status-tag-white {
+            background-color: #FFFFFF;
+            color: #1F2937;
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
         }
     </style>
 </head>
-<header class="w-full bg-gray-50 p-4">
+<body class="w-full bg-gray-50 p-4">
     <div class="max-w-7xl mx-auto">
-        <h1 class="text-3xl font-bold text-gray-800 mb-8">
-            Bahdasarov Oleksandr | Backend Developer
-        </h1>
-        <div class="grid">
-            <ul class="contact-list">
-                <li>
-                    <a href="mailto:sashabagdasarov@gmail.com">
-                        Email: sashabagdasarov@gmail.com
-                    </a>
-                </li>
-                <li>
-                    <a href="tel:+48734703890">
-                        Phone: +48734703890
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.google.com/maps?q=Bielsko-Biala,+Poland" target="_blank" rel="noopener noreferrer">
-                        Location: Bielsko-Biala, Poland
-                    </a>
-                </li>
-            </ul>
+        <h3 class="text-3xl font-bold text-gray-800 mb-8">
+            Oleksandr Bahdasarov
+        </h3>
+        <p class="text-lg text-gray-900">
+            Backend Developer
+            <br />
+            5+ Years of Experience
+            <br />
+            Hey there! I'm a Python backend developer with a strong focus on AI, Django and FastAPI. But wait, there`s more! I also
+            tinker with Solana REST APIs, handle Stripe &amp; PayPal integrations, and even migrate legacy PHP applications to
+            Python (yes, I`m that brave).
+            
+            When I`m not battling production bugs 🐞 or optimizing SQL queries ⚡, you might find me flashing firmware on car head
+            units 🚗 or experimenting with AI/NLP projects 🤖. I use Linux, but I`ve also been spotted using macOS when necessary.
+            
+            Oh, and if you ever need help processing Google Pay tokens in Stripe or designing subscription models with PayPal - I'm
+            your guy.
+        </p>
+        <div class="social-btn-container">
+        <a href="mailto:sashabagdasarov@gmail.com" class="social-btn flex-row items-center gap-2 mt-2 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2 h-2">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <p>sashabagdasarov@gmail.com</p>
+        </a>
+        <!-- telephone link -->
+        <a href="tel:+48734703890" class="social-btn flex-row items-center gap-2 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <p>+48734703890</p>
+        </a>
+        <a href="https://www.linkedin.com/in/aleksander-bagdasarov/" class="social-btn flex-row items-center gap-2 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+            </svg>
+            <p>Oleksandr Bahdasarov</p>
+        </a>
+        <a href="https://github.com/AleksandrBagdasarov" class="social-btn flex-row items-center gap-2 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+            <p>AleksandrBagdasarov</p>
+        </a>
         </div>
     </div>
-</header>
-<body class="w-full min-h-screen bg-gray-50 p-6">
+    <div class="max-w-7xl mx-auto mb-8">
+        <h3 class="text-xl font-bold text-gray-800 mb-3">
+            About
+        </h3>
+        <p class="text-lg text-gray-900">
+            I am a Backend Developer with 5+ years of experience in building scalable and maintainable systems. I have experience in building RESTful APIs, microservices, and serverless applications. I am proficient in PHP, Node.js, and Python. I have experience working with databases such as MySQL, PostgreSQL, and MongoDB. I am passionate about writing clean and maintainable code and I am always looking for ways to improve my skills.
+        </p>
+    </div>
     <div class="max-w-7xl mx-auto">
-        <div class="grid">
-            <!-- About Column -->
-            <div class="bg-white rounded-lg shadow-sm p-4">
-                <div class="flex items-center gap-2 mb-4">
-                    <!-- User Icon -->
-                    <svg class="w-5 h-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-                        <circle cx="12" cy="7" r="4" />
-                    </svg>
-                    <h2 class="text-lg font-semibold text-gray-700">About</h2>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <p class="text-gray-600">
-                        - 4+ years of software development experience as a backend developer
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <p class="text-gray-600">
-                        - Expertise in AI and NLP integrations, OpenAI API, and AI agent development
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <p class="text-gray-600">
-                        - Strong background in backend architecture design and leadership
-                    </p>
-                </div>
-                    <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                        <p class="text-gray-600">
-                            - Experience in deploying applications using cloud solutions (AWS)
-                        </p>
-                    </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <p class="text-gray-600">
-                        - Skilled in high-performance API development and system optimization
-                    </p>
-                </div>
-                    <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <p class="text-gray-600">
-                        - Working towards Amazon Developer Certification
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <p class="text-gray-600">
-                        - Passionate about implementing best practices and innovative solutions
-                    </p>
-                </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-8">
+            Work Experience
+        </h3>
+        <!-- Work Exp Card Start-->
+        <div class="work-exp-card">
+            <div class="flex-column content-space-btw">
+                <h4 class="text-lg font-bold text-gray-800 mb-3">
+                    Trinetix <span class="status-tag-purple">Remote</span>
+                </h4>
+                <p class="text-sm font-medium text-gray-600">
+                    01.2024 - Present
+                </p>
             </div>
-            <!-- Skills Column -->
-            <div class="bg-white rounded-lg shadow-sm p-4">
-                <div class="flex items-center gap-2 mb-4">
-                    <svg class="w-5 h-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m18 16 4-4-4-4" />
-                        <path d="m6 8-4 4 4 4" />
-                        <path d="m14.5 4-5 16" />
-                    </svg>
-                    <h2 class="text-lg font-semibold text-gray-700">Skills</h2>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">Programming Languages</h3>
-                    <p class="text-gray-600">Python, JavaScript</p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">Data Processing</h3>
-                    <p class="text-gray-600">Pandas, RegEx, Spacy, nltk, langchain, Openai</p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">Web Development</h3>
-                    <p class="text-gray-600">Flask, FastAPI, Django</p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">Database Management</h3>
-                    <p class="text-gray-600">PostgreSQL, Redis, Elastic Search</p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">Message Queues</h3>
-                    <p class="text-gray-600">RabbitMQ, Redis</p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">Containerization &amp; Cloud</h3>
-                    <p class="text-gray-600">Docker, AWS, Azure</p>
-                </div>
-            </div>
-            <!-- Experience Column -->
-            <div class="bg-white rounded-lg shadow-sm p-4">
-                <div class="flex items-center gap-2 mb-4">
-                    <!-- Briefcase Icon -->
-                    <svg class="w-5 h-5 text-purple-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                        <rect width="20" height="14" x="2" y="6" rx="2" />
-                    </svg>
-                    <h2 class="text-lg font-semibold text-gray-700">Experience</h2>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">Trinetix (02.2024 - Present)</h3>
-                    <p class="text-sm text-gray-500">Senior Backend Developer</p>
-                    <p class="text-gray-600 mt-2">
-                        - Led the design and development of AI-powered chat applications, integrating OpenAI for NLP-based auto
-                        <br>
-                        - Architected scalable and high-performance backend systems for AI-driven solutions.
-                        <br>
-                        - Implemented cutting-edge NLP features, improving model efficiency and application responsiveness.
-                        <br>
-                        - Developed AI agents to handle complex chatbot interactions, automation tasks, and customer engagemen
-                        <br>
-                        - Worked as the lead backend developer on multiple projects, with one completed entirely solo.
-                        <br>
-                        - Optimized API performance and backend infrastructure for low-latency AI processing.
-                        <br>
-                        - Played a key role in integrating AI into business workflows, making projects more efficient and cost-effective.
-                        <br>
-                        - Collaborated with cross-functional teams to deliver high-quality software solutions.
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">BorisDoes (10.2022 - 02.2024)</h3>
-                    <p class="text-sm text-gray-500">Senior Backend Developer</p>
-                    <p class="text-gray-600 mt-2">
-                        - Developed and optimized backend systems using Python, Django, PostgreSQL, RabbitMQ, Docker, Redis, and AWS.
-                        <br>
-                        - Led the development of a high-performance API for a real-time chat application.
-                        <br>
-                        - Implemented CI/CD pipelines and improved deployment processes.
-                        <br>
-                        - Played a critical role in transforming the platform into a full-scale website builder with custom domains, billing, and user management.
-                        <br>
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">DevForth (09.2021 - 04.2022)</h3>
-                    <p class="text-sm text-gray-500">Middle Backend Developer</p>
-                    <p class="text-gray-600 mt-2">
-                        - Worked on an online casino platform with a focus on high-performance API development.
-                        <br>
-                        - Led the development of a high-performance API for a real-time chat application.
-                        <br>
-                        - Optimized complex algorithms and database operations for cryptocurrency payments.
-                        <br>
-                        - Gained expertise in integration testing and performance optimization.
-                        <br>
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">DataForest (02.2021 - 09.2021)</h3>
-                    <p class="text-sm text-gray-500">Backend Developer</p>
-                    <p class="text-gray-600 mt-2">
-                        - Maintained and improved existing data scraping and processing tools for business intelligence.
-                        <br>
-                        - Led the development of a high-performance API for a real-time chat application.
-                        <br>
-                        - Integrated Google Sheets and Airtable for automated data delivery.
-                        <br>
-                        - Improved database schema efficiency and optimized parsing algorithms.
-                        <br>
-                        - Worked on a variety of projects, including web scraping, data processing, and API development.
-                        <br>
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">DataOx (08.2020 - 02.2021)</h3>
-                    <p class="text-sm text-gray-500">Backend Developer</p>
-                    <p class="text-gray-600 mt-2">
-                        - Developed custom web scrapers and data processing scripts for client-specific data extraction needs.
-                        <br>
-                        - Created and optimized database schemas for efficient data storage and retrieval.
-                        <br>
-                        - Implemented data processing pipelines for large-scale data extraction and analysis.
-                        <br>
-                    </p>
-                </div>
-            </div>
-            <!-- Projects Column -->
-            <div class="bg-white rounded-lg shadow-sm p-4">
-                <div class="flex items-center gap-2 mb-4">
-                    <!-- Boxes Icon -->
-                    <svg class="w-5 h-5 text-orange-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" />
-                        <path d="m7 16.5-4.74-2.85" />
-                        <path d="m7 16.5 5-3" />
-                        <path d="M7 16.5v5.17" />
-                        <path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z" />
-                        <path d="m17 16.5-5-3" />
-                        <path d="m17 16.5 4.74-2.85" />
-                        <path d="M17 16.5v5.17" />
-                        <path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z" />
-                        <path d="M12 8 7.26 5.15" />
-                        <path d="m12 8 4.74-2.85" />
-                        <path d="M12 13.5V8" />
-                    </svg>
-                    <h2 class="text-lg font-semibold text-gray-700">Projects</h2>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">E-commerce Platform</h3>
-                    <p class="text-gray-600 mt-2">
-                        Built a full-stack e-commerce solution using React, Node.js, and MongoDB
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-3">
-                    <h3 class="font-medium text-gray-800">Task Management App</h3>
-                    <p class="text-gray-600 mt-2">
-                        Developed a Kanban-style task management application using React and Firebase
-                    </p>
-                </div>
+            <h6 class="text-sm font-bold text-gray-800 mb-3">
+                Senior Backend Developer
+            </h6>
+            <p class="text-sm text-gray-600">
+                Most of my tasks are integration with AI.
+                <br>
+                creating AI agents for various tasks in many projects.
+                <br>
+                I often took a leading role in the team, actively discussing the development plan with business analysts and designers.
+                <br>
+                Several projects were made from scratch, including internal company projects.
+                <br>
+                Some projects were created by large teams and people from all over the world, the project team could be located in 6
+                different time zones.
+                <br>
+                In this position, I especially understood how important it is to be able to demonstrate leadership qualities in order to
+                bring projects to production within the established deadlines
+            </p>
+            <div class="exp-tech-stack">
+                <p class="tech-badge">
+                    Python
+                </p>
+                <p class="tech-badge">
+                    NLTK
+                </p>
+                <p class="tech-badge">
+                    Openai
+                </p>
+                <p class="tech-badge">
+                    Langchain
+                </p>
+                <p class="tech-badge">
+                    Spacy
+                </p>
+                <p class="tech-badge">
+                    Pandas
+                </p>
+                <p class="tech-badge">
+                    Redis
+                </p>
+                <p class="tech-badge">
+                    PostgreSQL
+                </p>
+                <p class="tech-badge">
+                    MySQL
+                </p>
+                <p class="tech-badge">
+                    Elasticsearch
+                </p>
             </div>
         </div>
+        <!-- Work Exp Card End-->
+<!-- Work Exp Card Start-->
+<div class="work-exp-card">
+    <div class="flex-column content-space-btw">
+        <h4 class="text-lg font-bold text-gray-800 mb-3">
+            BorisDoes <span class="status-tag-purple">Remote</span>
+        </h4>
+        <p class="text-sm font-medium text-gray-600">
+            03.2022 - 02.2024
+        </p>
+    </div>
+    <h6 class="text-sm font-bold text-gray-800 mb-3">
+        Senior Backend Developer
+    </h6>
+    <p class="text-sm text-gray-600">
+        When I joined this position, the project faced various challenges. There was a high demand for
+        developing new features and integrations, but the code required significant refactoring to meet new
+        requirements and optimize queries and algorithms. During this project, I implemented CI/CD,
+        optimized deployment on Amazon services, improved most of the API queries, built a WebSocket
+        server from scratch, added security measures to protect the API from external attacks, and simplified
+        development environment setup. I also played a significant role in developing many features and led
+        the development process. The project transformed from a platform for business-client communication
+        to a website builder that businesses could use under their own domain names, offering branding, chat
+        functionality, quote creation, invoice sending, email and SMS notifications, paperless features, and
+        accounting integrations, allowing direct payments from clients to businesses. This project was aimed
+        at small and medium-sized businesses looking for a comprehensive online presence solution.
+    </p>
+    <div class="exp-tech-stack">
+        <p class="tech-badge">
+            Python
+        </p>
+        <p class="tech-badge">
+            Openai
+        </p>
+        <p class="tech-badge">
+            PayPal
+        </p>
+        <p class="tech-badge">
+            Stripe
+        </p>
+        <p class="tech-badge">
+            Redis
+        </p>
+        <p class="tech-badge">
+            Docker
+        </p>
+        <p class="tech-badge">
+            RabbitMQ
+        </p>
+        <p class="tech-badge">
+            Django
+        </p>
+        <p class="tech-badge">
+            Websockets
+        </p>
+    </div>
+</div>
+<!-- Work Exp Card End-->
+<!-- Work Exp Card Start-->
+<div class="work-exp-card">
+    <div class="flex-column content-space-btw">
+        <h4 class="text-lg font-bold text-gray-800 mb-3">
+            DevForth <span class="status-tag-purple">Remote</span>
+        </h4>
+        <p class="text-sm font-medium text-gray-600">
+            09.2021 - 04.2022
+        </p>
+    </div>
+    <h6 class="text-sm font-bold text-gray-800 mb-3">
+        Middle Backend Developer
+    </h6>
+    <p class="text-sm text-gray-600">
+        I initially joined the company for automated testing, but I quickly began taking on tasks related to
+        feature development and optimizing existing code. We were responsible for an online casino project
+        based on cryptocurrency payments, which demanded high code performance and efficient database
+        operations. I became skilled in writing integration tests in this role.
+    </p>
+    <div class="exp-tech-stack">
+        <p class="tech-badge">
+            Python
+        </p>
+        <p class="tech-badge">
+            PostgreSQL
+        </p>
+        <p class="tech-badge">
+            RabbitMQ
+        </p>
+        <p class="tech-badge">
+            Redis
+        </p>
+        <p class="tech-badge">
+            Docker
+        </p>
+        <p class="tech-badge">
+            AWS
+        </p>
+        <p class="tech-badge">
+            Stripe
+        </p>
+        <p class="tech-badge">
+            Grafana
+        </p>
+        <p class="tech-badge">
+            Websockets
+        </p>
+    </div>
+</div>
+<!-- Work Exp Card End-->
+<!-- Work Exp Card Start-->
+<div class="work-exp-card">
+    <div class="flex-column content-space-btw">
+        <h4 class="text-lg font-bold text-gray-800 mb-3">
+            DataForest <span class="status-tag-purple">Remote</span>
+        </h4>
+        <p class="text-sm font-medium text-gray-600">
+            12.2020 - 09.2021
+        </p>
+    </div>
+    <h6 class="text-sm font-bold text-gray-800 mb-3">
+        Backend Developer
+    </h6>
+    <p class="text-sm text-gray-600">
+        The company provided B2B solutions, and our clients used the tools we developed for market
+        analysis and competitor monitoring. I was responsible for supporting, updating, and enhancing
+        existing parsers integrated into web frameworks that provided access to collected data. There were
+        also integrations with Google Sheets and Airtable.
+    </p>
+    <div class="exp-tech-stack">
+        <p class="tech-badge">
+            Python
+        </p>
+        <p class="tech-badge">
+            PostgreSQL
+        </p>
+        <p class="tech-badge">
+            RabbitMQ
+        </p>
+        <p class="tech-badge">
+            Docker
+        </p>
+        <p class="tech-badge">
+            Flask
+        </p>
+        <p class="tech-badge">
+            Django
+        </p>
+        <p class="tech-badge">
+            Pandas
+        </p>
+        <p class="tech-badge">
+            RegEx
+        </p>
+        <p class="tech-badge">
+            Parsel
+        </p>
+        <p class="tech-badge">
+            HTML
+        </p>
+        <p class="tech-badge">
+            CSS
+        </p>
+        <p class="tech-badge">
+            JavaScript
+        </p>
+    </div>
+</div>
+<!-- Work Exp Card End-->
+<!-- Work Exp Card Start-->
+<div class="work-exp-card">
+    <div class="flex-column content-space-btw">
+        <h4 class="text-lg font-bold text-gray-800 mb-3">
+            DataOx <span class="status-tag-white">In Office</span>
+        </h4>
+        <p class="text-sm font-medium text-gray-600">
+            02.2020 - 12.2020
+        </p>
+    </div>
+    <h6 class="text-sm font-bold text-gray-800 mb-3">
+        Backend Developer
+    </h6>
+    <p class="text-sm text-gray-600">
+        I developed scripts for web scraping within the company's framework to gather data from the internet
+        based on client requests. I was given websites and sample content to collect and save in a
+        client-friendly format. Task durations were short, ranging from three days to one week to complete.
+    </p>
+    <div class="exp-tech-stack">
+        <p class="tech-badge">
+            Python
+        </p>
+        <p class="tech-badge">
+            PostgreSQL
+        </p>
+        <p class="tech-badge">
+            RabbitMQ
+        </p>
+        <p class="tech-badge">
+            Flask
+        </p>
+        <p class="tech-badge">
+            Linux
+        </p>
+        <p class="tech-badge">
+            JavaScript
+        </p>
+        <p class="tech-badge">
+            HTML
+        </p>
+        <p class="tech-badge">
+            CSS
+        </p>
+        <p class="tech-badge">
+            Parsel
+        </p>
+    </div>
+</div>
+<!-- Work Exp Card End-->
     </div>
 </body>
 </html>
