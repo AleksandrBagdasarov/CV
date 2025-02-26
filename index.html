@@ -15,9 +15,6 @@
         body {
             font-family: "Mulish", serif;
         }
-        .w-full {
-            /* width: 100%; */
-        }
 
         .min-h-screen {
             min-height: 100vh;
@@ -238,13 +235,48 @@
             padding: 0.25rem 0.5rem;
             font-size: 0.75rem;
         }
+        .print-btn {
+            height: 4rem;
+            width: 8rem;
+            background-color: #2563EB;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .print-btn:hover {
+            background-color: #1D4ED8;
+        }
+
+        @media print {
+            div {
+                break-inside: avoid;
+            }
+            html,
+            body,
+            body * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .print-btn {
+                display: none;
+            }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
     </style>
 </head>
-<body class="w-full bg-gray-50 p-4">
+<body class="bg-gray-50 p-4">
     <div class="max-w-7xl mx-auto">
-        <h3 class="text-3xl font-bold text-gray-800 mb-8">
-            Oleksandr Bahdasarov
-        </h3>
+        <div class="flex-row content-space-btw">
+            <h3 class="text-3xl font-bold text-gray-800 mb-8">
+                Oleksandr Bahdasarov
+            </h3>
+            <button id="download-pdf" class="print-btn text-lg" onclick="window.print()">Get PDF</button>
+        </div>
         <p class="text-lg text-gray-900">
             Backend Developer
             <br />
@@ -357,6 +389,12 @@
                 </p>
                 <p class="tech-badge">
                     MySQL
+                </p>
+                <p class="tech-badge">
+                    Django
+                </p>
+                <p class="tech-badge">
+                    FastAPI
                 </p>
                 <p class="tech-badge">
                     Elasticsearch
